@@ -63,7 +63,8 @@ def articles_from_file(file_path: str) -> List[WikitextArticle]:
     content = f.read()
   content = content.decode('utf-8')
 
-  title_re = re.compile(r'(\n = ([^=].*) = \n \n)')
+  title_re = re.compile(r'(\n = ([^=].*) = \n\n\n)')
+  #title_re = re.compile(r'(\n = ([^=].*) = \n \n)')
   parts = title_re.split(content)
 
   # Skip the first part which is empty

@@ -45,7 +45,6 @@ from wikigraphs.data import paired_dataset
 from wikigraphs.data import tokenizers
 from wikigraphs.data import wikitext
 
-
 class DatasetType(enum.Enum):
   text = 1
   graph = 2
